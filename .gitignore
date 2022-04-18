@@ -21,6 +21,11 @@ server/pgdata
 /coverage
 /.nyc_output
 **/.env
+**/.eslintrc.js
+**/.prettierrc
+**/nest-cli.json
+**/next-env.d.ts
+
 
 # IDEs and editors
 /.idea
