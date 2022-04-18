@@ -1,0 +1,84 @@
+@import 'mixins';
+
+.post {
+	display: grid;
+	position: relative;
+	padding: 20px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: 30px;
+
+	.title {
+		font-size: 22px !important;
+		letter-spacing: 1px;
+		margin: 0;
+		font-weight: 500 !important;
+		word-break: break-word;
+	}
+	.postDescription {
+		font-size: 16px;
+		margin-top: 20px;
+		p {
+			margin: 10px 0 15px 0;
+			word-break: break-word;
+		}
+		ul {
+			margin: 10px 0 15px 0;
+			word-break: break-word;
+			li {
+				margin: 0 0 5px 0;
+				word-break: break-word;
+			}
+		}
+	}
+	.postActionsBlock {
+		margin-top: 20px;
+	}
+	.postImage {
+		display: flex;
+	}
+	.delete {
+		position: absolute;
+		right: 0;
+		padding: 20px;
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+	.userInfo {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 20px;
+
+		.imageContainer {
+			display: flex;
+			margin-right: 10px;
+			img {
+				border-radius: 3px;
+			}
+		}
+		.linkItem {
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.createDate {
+			display: flex;
+			font-size: 12px;
+			opacity: 0.8;
+			margin-left: 10px;
+			justify-content: flex-end;
+			flex-grow: 1;
+		}
+	}
+	.postIsEdited {
+		display: flex;
+		justify-content: flex-end;
+		font-size: 10px;
+	}
+
+	@include mq(480) {
+		padding: 10px;
+	}
+
+}

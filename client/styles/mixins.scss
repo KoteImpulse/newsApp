@@ -1,0 +1,38 @@
+@mixin mq($from, $to: false) {
+	@if $to {
+		@media (min-width: #{$from}px) and (max-width: #{$to}px) {
+			@content;
+		}
+	} @else {
+		@media (max-width: #{$from}px) {
+			@content;
+		}
+	}
+}
+@mixin mqh($from, $to: false) {
+	@if $to {
+		@media (min-height: #{$from}px) and (max-height: #{$to}px) {
+			@content;
+		}
+	} @else {
+		@media (max-height: #{$from}px) {
+			@content;
+		}
+	}
+}
+
+@mixin fontStyle($size: false, $colour: false, $weight: false, $lh: false) {
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	@if $size {
+		font-size: $size;
+	}
+	@if $colour {
+		color: $colour;
+	}
+	@if $weight {
+		font-weight: $weight;
+	}
+	@if $lh {
+		line-height: $lh;
+	}
+}

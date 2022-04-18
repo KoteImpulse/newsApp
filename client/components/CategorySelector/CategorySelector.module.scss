@@ -1,0 +1,49 @@
+.categorySelector {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	max-width: 320px;
+	width: 100%;
+	cursor: pointer;
+	user-select: none;
+
+	.selectorButton {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		max-width: 320px;
+		width: 100%;
+		font-size: 16px;
+		font-weight: bold;
+		padding: 10px;
+		background: #fff;
+		box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+		cursor: pointer;
+		user-select: none;
+	}
+
+	.selectorOptions {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		max-width: 320px;
+		width: 100%;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 10px;
+		background: #fff;
+		box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+		top: 110%;
+		z-index: 2;
+		font-weight: normal;
+		cursor: pointer;
+
+		.selectotOption {
+			display: flex;
+			background: #fff;
+			padding: 10px;
+			cursor: pointer;
+			user-select: none;
+		}
+	}
+}

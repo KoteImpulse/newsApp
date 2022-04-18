@@ -1,0 +1,33 @@
+@import 'mixins';
+
+.subscribers {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 8px;
+	padding: 20px;
+	height: min-content;
+	max-width: 490px;
+	.title {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 55px);
+		row-gap: 10px;
+		column-gap: 10px;
+		.imageContainer {
+			margin-right: 15px;
+			img {
+				border-radius: 50%;
+			}
+		}
+	}
+
+	@include mq(991) {
+		margin-left: 0px;
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+}

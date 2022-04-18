@@ -1,0 +1,40 @@
+@import 'mixins';
+.tabs {
+	display: grid;
+	grid-template-columns: 1fr;
+	.tabLinks {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		.tab {
+			list-style: none;
+			position: relative;
+			max-width: 200px;
+			.tabLink {
+				display: flex;
+				padding: 10px;
+				cursor: pointer;
+				user-select: none;
+				background: none;
+				border: none;
+				text-align: left;
+
+				.tabTitle {
+					font-size: 16px;
+
+					@include mq(480) {
+						font-size: 14px;
+					}
+				}
+			}
+			.underline {
+				position: absolute;
+				background-color: var(--colorBlue);
+				transform-origin: center top;
+				height: 1px;
+				width: 100%;
+			}
+		}
+	}
+}

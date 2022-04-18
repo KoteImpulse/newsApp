@@ -1,0 +1,30 @@
+.commentItem {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 25px;
+	.userInfo {
+		display: flex;
+		align-items: center;
+		.imageContainer {
+			display: flex;
+			margin-right: 10px;
+			img {
+				border-radius: 3px;
+			}
+		}
+		.linkItem {
+			cursor: pointer;
+		}
+	}
+	.postText {
+		font-size: 16px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		word-break: break-word;
+	}
+	.postTitle {
+		font-size: 15px;
+		font-weight: 600;
+	}
+}

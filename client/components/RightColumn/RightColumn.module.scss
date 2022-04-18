@@ -1,0 +1,54 @@
+@import 'mixins';
+
+.rightColumn {
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+	height: calc(100vh - 80px);
+	top: 70px;
+	overflow: hidden;
+	.titleContainer {
+		cursor: pointer;
+
+		.title {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			margin: 0;
+			font-size: 18px;
+			margin-bottom: 20px;
+			user-select: none;
+
+			.text {
+			}
+			.icon {
+				display: flex;
+				align-items: center;
+				font-size: 18px;
+				margin-left: 8px;
+				svg {
+					transform: rotate(180deg);
+					width: 18px;
+					height: 18px;
+				}
+			}
+		}
+	}
+	.commentsArray {
+		overflow-y: auto;
+		overflow-x: hidden;
+		flex: 1;
+		width: 200%;
+		.comments {
+			max-width: 320px;
+		}
+	}
+
+	@include mq(1150) {
+		.commentsArray {
+			.comments {
+				max-width: 210px;
+			}
+		}
+	}
+}

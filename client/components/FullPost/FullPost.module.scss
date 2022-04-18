@@ -1,0 +1,112 @@
+@import 'mixins';
+
+.fullPost {
+	display: grid;
+	grid-template-rows: 1fr;
+	padding: 20px;
+	background-color: white;
+	border-radius: 5px;
+	max-width: 640px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
+		.mainText {
+			display: flex;
+			position: relative;
+			flex-direction: column;
+			margin-bottom: 20px;
+			align-items: center;
+
+			.postTitle {
+				position: relative;
+				font-weight: 500 !important;
+				margin-bottom: 20px !important;
+				font-size: 36px !important;
+				margin-top: 20px;
+				text-align: left;
+			}
+			.postText {
+				max-width: 90%;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				p {
+					margin: 10px 0;
+					word-break: break-word;
+				}
+				ul {
+					margin-bottom: 10px;
+				}
+			}
+			.editButton {
+				position: absolute;
+				right: -15px;
+				top: -15px;
+			}
+		}
+		.postActions {
+			display: flex;
+			margin-bottom: 20px;
+		}
+		.underPostBlock {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			.userInfo {
+				display: flex;
+				align-items: center;
+				margin-right: 10px;
+				.imageContainer {
+					display: flex;
+					margin-right: 10px;
+					img {
+						border-radius: 5px;
+					}
+				}
+				.linkItem {
+					cursor: pointer;
+					display: flex;
+					margin-right: 10px;
+					a {
+						max-width: 50px;
+						.name {
+							font-size: 18px;
+						}
+					}
+				}
+				.rating {
+					font-size: 16px;
+					color: #2ea83a;
+					font-weight: 500;
+				}
+			}
+			.buttonsBlock {
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				.textButton {
+					margin-right: 10px;
+				}
+				// .subButton {
+				// }
+			}
+		}
+	}
+
+	@include mq(768) {
+		.container {
+			.underPostBlock {
+				flex-direction: column;
+				align-items: stretch;
+
+				.userInfo {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,104 @@
+@import 'mixins';
+
+.profileHeader {
+	display: grid;
+	width: 100%;
+	max-width: 1000px;
+
+	grid-auto-rows: min-content;
+	.container {
+		display: grid;
+		padding: 20px;
+		border-radius: 8px;
+		background-color: white;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 220px 100px 50px;
+		margin-bottom: 20px;
+
+		.userInfo {
+			display: flex;
+			flex-direction: column;
+			justify-self: start;
+			.imageContainer {
+				display: flex;
+				img {
+					border-radius: 8px;
+				}
+			}
+
+			.fullName {
+				margin-top: 10px;
+				font-weight: 700;
+				font-size: 34px;
+			}
+		}
+		.buttonsBlock {
+			display: flex;
+			flex-direction: column;
+			justify-self: end;
+			.settingsButton {
+				margin-bottom: 10px;
+			}
+		}
+		.userStats {
+			grid-column: 1/3;
+			.cont {
+				display: flex;
+				.rating {
+					color: #000000;
+					margin-right: 15px;
+					font-weight: bold;
+				}
+				.subs {
+				}
+			}
+			.date {
+			}
+		}
+		.tabsBlock {
+			display: flex;
+			font-size: 16px;
+			grid-column: 1/3;
+		}
+		@include mq(991) {
+			grid-template-rows: 220px 140px 50px;
+
+			.userStats {
+				.cont {
+					flex-direction: column;
+					.rating {
+						margin: 0 0 5px 0;
+					}
+					.subs {
+						margin: 0 0 5px 0;
+					}
+				}
+				.date {
+				}
+			}
+		}
+		@include mq(480) {
+			padding: 10px;
+		}
+	}
+
+	.contentBlock {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 20px;
+
+		.texts {
+			display: flex;
+			flex-direction: column;
+			max-width: 490px;
+		}
+		@include mq(991) {
+			grid-template-columns: 1fr;
+
+			.texts {
+				order: 2;
+				max-width: 100%;
+			}
+		}
+	}
+}

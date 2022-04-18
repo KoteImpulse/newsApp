@@ -1,0 +1,51 @@
+version: '3.8'
+volumes:
+  pgadmin-data:
+  pgdata:
+services:
+  postgresql-test:
+    container_name: postgresql-test
+    image: postgres:13
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'admin'
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - 30001:5432
+    networks:
+      - test
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4-test
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgresadmin@mail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - '8080:80'
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      - postgresql-test
+    networks:
+      - test
+  api-test:
+    container_name: backend
+    build:
+      dockerfile: Dockerfile
+      context: .
+    depends_on:
+      - postgresql-test
+    environment:
+      POSTGRES_HOST: 'postgresql-test'
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'admin'
+      POSTGRES_DATABASE: 'dtfClone11'
+    ports:
+      - '5000:5000'
+    networks:
+      - test
+networks:
+  test:

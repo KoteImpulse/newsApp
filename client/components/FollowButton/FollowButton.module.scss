@@ -1,0 +1,17 @@
+.followButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.checkButton {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #2ea83a;
+	}
+	.addButton {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

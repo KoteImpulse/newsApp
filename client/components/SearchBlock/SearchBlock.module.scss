@@ -1,0 +1,40 @@
+@import 'mixins';
+
+.searchBlock {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	max-width: 360px;
+	width: 100%;
+	background-color: var(--colorBackgroundHeader);
+	border-radius: 10px;
+	padding: 10px;
+
+	.searchResult {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		.searchItem {
+			display: flex;
+			padding: 5px;
+			margin-bottom: 5px;
+			border-bottom: 1px solid black;
+			word-break: break-word;
+			cursor: pointer;
+			background: var(--colorBackgroundHeader);
+			user-select: none;
+		}
+	}
+
+	.searchMoreButton{
+		
+	}
+	@include mq(767) {
+		max-width: 100%;
+		width: 100%;
+		}
+	}
+

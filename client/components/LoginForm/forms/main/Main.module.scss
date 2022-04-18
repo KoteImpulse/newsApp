@@ -1,0 +1,26 @@
+.main {
+	display: grid;
+	grid-template-rows: min-content min-content;
+	row-gap: 10px;
+	.mainButtonsContainer {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		row-gap: 10px;
+
+		button {
+			.icon {
+				flex: 0 0 20px;
+				margin-right: 10px;
+			}
+			.label {
+				flex-grow: 1;
+				flex-shrink: 1;
+			}
+		}
+	}
+	.secondaryButtonsContainer {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 10px;
+	}
+}

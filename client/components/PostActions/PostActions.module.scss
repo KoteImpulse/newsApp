@@ -1,0 +1,49 @@
+.listItems {
+	display: flex;
+	position: relative;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+
+	.postViews {
+		display: flex;
+
+		margin-right: 10px;
+		cursor: pointer;
+		.views {
+			font-size: 14px;
+		}
+	}
+
+	.listItem {
+		display: flex;
+		align-items: center;
+		.text {
+			font-size: 14px;
+		}
+	}
+	.views {
+	}
+	.comments {
+	}
+	.reposts {
+	}
+	.favorite {
+	}
+	.share {
+		position: relative;
+		.copiedModal {
+			display: flex;
+			position: absolute;
+			font-size: 14px;
+			padding: 6px;
+			border-radius: 4px;
+			color: white;
+			background: black;
+			white-space: pre-wrap;
+			pointer-events: none;
+			z-index: 1;
+			left: 100%;
+		}
+	}
+}

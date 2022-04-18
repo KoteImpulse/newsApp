@@ -1,0 +1,29 @@
+.tooltipWrapper {
+	display: inline-block;
+	position: relative;
+
+	.tooltip {
+		display: flex;
+		position: absolute;
+		font-size: 14px;
+		padding: 6px;
+		border-radius: 4px;
+		color: white;
+		background: black;
+		white-space: pre-wrap;
+		pointer-events: none;
+		z-index: 10;
+	}
+	.tooltip.moveLeft {
+		transform: translateX(-70%);
+	}
+	.tooltip.moveRight {
+		transform: translateX(70%);
+	}
+	.tooltip.moveTop {
+		transform: translateY(-70%);
+	}
+	.tooltip.moveBottom {
+		transform: translateY(70%);
+	}
+}

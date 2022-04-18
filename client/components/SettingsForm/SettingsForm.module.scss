@@ -1,0 +1,162 @@
+@import 'mixins';
+.settingsForm {
+	display: grid;
+	width: 100%;
+	background-color: white;
+	border-radius: 8px;
+	padding: 20px;
+
+	.changeAvatarBlock {
+		display: grid;
+		grid-template-rows: repeat(1, max-content);
+		grid-template-columns: 1fr;
+
+		justify-content: flex-start;
+		justify-items: start;
+		width: 100%;
+
+		.imageContainer {
+			display: flex;
+			margin-bottom: 20px;
+			cursor: pointer;
+			img {
+				border-radius: 8px;
+			}
+		}
+		.blockHeader {
+			display: flex;
+			word-wrap: normal;
+		}
+		.blockSubHeader {
+			display: flex;
+			word-wrap: normal;
+		}
+
+		.buttonsBlock {
+			display: flex;
+			flex-direction: column;
+			.fileButton {
+				display: flex;
+				flex-grow: 0;
+				margin-bottom: 10px;
+				background-color: var(--colorBackgroundButtons);
+			}
+			.sendButton {
+				display: flex;
+				flex-grow: 0;
+				margin-bottom: 10px;
+				background-color: var(--colorBackgroundButtons);
+			}
+		}
+	}
+
+	.nicknameBlock {
+		display: grid;
+		grid-template-rows: repeat(2, max-content);
+		justify-content: flex-start;
+		justify-items: start;
+
+		.blockHeader {
+			display: flex;
+			word-wrap: normal;
+		}
+		.blockSubHeader {
+			display: flex;
+			word-wrap: normal;
+		}
+
+		.formNicknameChange {
+			width: 100%;
+			height: 40px;
+			border-radius: 10px;
+			background-color: rgba(0, 0, 0, 0.05);
+			font-size: 16px;
+			padding-left: 40px;
+			border: 1px solid transparent;
+			margin-bottom: 10px;
+		}
+		.sendButton {
+			display: flex;
+			flex-grow: 0;
+			margin-bottom: 10px;
+			background-color: var(--colorBackgroundButtons);
+		}
+	}
+	.optionsBlock {
+		display: grid;
+		grid-template-rows: repeat(2, max-content);
+		justify-content: flex-start;
+		justify-items: start;
+
+		.blockHeader {
+			display: flex;
+			word-wrap: normal;
+		}
+		.blockSubHeader {
+			display: flex;
+			word-wrap: normal;
+		}
+
+		.options {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 10px;
+			.buttonsBlock {
+				display: flex;
+				flex-direction: row;
+				.commentButton {
+					display: flex;
+					flex-grow: 0;
+					margin-right: 10px;
+					background-color: var(--colorBackgroundButtons);
+				}
+				.userTabButton {
+					display: flex;
+					flex-grow: 0;
+					margin-right: 10px;
+					background-color: var(--colorBackgroundButtons);
+				}
+				.sideCommentsButton {
+					display: flex;
+					flex-grow: 0;
+					margin-right: 10px;
+					background-color: var(--colorBackgroundButtons);
+				}
+				.menuButton {
+					display: flex;
+					flex-grow: 0;
+					margin-right: 10px;
+					background-color: var(--colorBackgroundButtons);
+				}
+				@include mq(480) {
+					flex-direction: column;
+					.commentButton {
+						margin-right: unset;
+						margin-bottom: 5px;
+					}
+					.userTabButton {
+						margin-right: unset;
+						margin-bottom: 5px;
+					}
+					.sideCommentsButton {
+						margin-right: unset;
+						margin-bottom: 5px;
+					}
+					.menuButton {
+						margin-right: unset;
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+
+		.sendButton {
+			display: flex;
+			flex-grow: 0;
+			margin-bottom: 10px;
+			background-color: var(--colorBackgroundButtons);
+		}
+	}
+	@include mq(480) {
+	}
+}

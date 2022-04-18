@@ -1,0 +1,93 @@
+.ratingComponent {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: minmax(200px, auto) 1fr;
+	.pageHeader {
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		margin-bottom: 20px;
+		border-radius: 8px;
+		padding: 20px;
+		.title {
+			font-weight: bold;
+			font-size: 30px;
+			margin-bottom: 6px;
+			margin-top: 20px;
+		}
+		.textContent {
+			font-size: 16px;
+		}
+	}
+	.tableContent {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 50px repeat(auto-fill, 80px);
+		background-color: white;
+		border-radius: 8px;
+		width: 100%;
+
+		.tableHeader {
+			display: flex;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+			align-items: center;
+			font-weight: 600;
+			padding: 15px;
+			.col1 {
+				display: flex;
+				flex-basis: 50%;
+				flex-shrink: 1;
+				flex-grow: 1;
+			}
+			.col2 {
+				display: flex;
+				flex-basis: 0%;
+				flex-shrink: 0;
+				flex-grow: 1;
+			}
+			.col3 {
+				display: flex;
+				flex-basis: 45px;
+				flex-shrink: 0;
+				flex-grow: 0;
+			}
+		}
+		.tableRow {
+			display: flex;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+			align-items: center;
+			padding: 15px;
+			height: 80px;
+
+			.col1 {
+				display: flex;
+				flex-basis: 50%;
+				flex-shrink: 1;
+				flex-grow: 1;
+				align-items: center;
+				.imageContainer {
+					display: flex;
+					margin: 0 10px;
+					img {
+						border-radius: 3px;
+					}
+				}
+				.profileLink{
+					cursor: pointer;
+				}
+			}
+			.col2 {
+				display: flex;
+				flex-basis: 0%;
+				flex-shrink: 0;
+				flex-grow: 1;
+			}
+			.col3 {
+				display: flex;
+				flex-basis: 45px;
+				flex-shrink: 0;
+				flex-grow: 0;
+			}
+		}
+	}
+}

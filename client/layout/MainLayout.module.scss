@@ -1,0 +1,73 @@
+@import 'mixins';
+
+.mainLayout {
+	display: grid;
+	grid-template-columns: minmax(160px, 220px) 10fr minmax(200px, 320px);
+	padding: 10px 10px 0px;
+	column-gap: 10px;
+	padding-bottom: 10px;
+	&.hideComments {
+		grid-template-columns: minmax(160px, 220px) 10fr;
+
+		@include mq(575) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&.hideMenu {
+		grid-template-columns: 10fr minmax(200px, 320px);
+	}
+
+	&.hideMenu.hideComments {
+		grid-template-columns: 1fr;
+	}
+
+	.leftSide {
+		display: grid;
+		width: 100%;
+		justify-items: start;
+	}
+	.rightSide {
+		display: grid;
+		width: 100%;
+		justify-items: start;
+	}
+	.content {
+		display: grid;
+		width: 100%;
+		max-width: 640px;
+		margin: 0 auto;
+		grid-auto-rows: min-content;
+
+		&Full {
+			max-width: 1000px;
+		}
+	}
+
+	@include mq(991) {
+		grid-template-columns: minmax(160px, 220px) 1fr;
+		.rightSide {
+			display: none;
+		}
+	}
+	@include mq(768) {
+		grid-template-columns: minmax(160px, 180px) 1fr;
+		.rightSide {
+			display: none;
+		}
+	}
+	@include mq(575) {
+		grid-template-columns: 1fr;
+		.leftSide {
+			display: none;
+		}
+		.leftSide.active {
+			display: grid;
+			position: sticky;
+			top: 70px;
+			z-index: 2;
+		}
+		.content.active {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.сomment {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	.userInfo {
+		display: flex;
+		align-items: center;
+		justify-content: stretch;
+
+		.imageContainer {
+			display: flex;
+			margin-right: 10px;
+			img {
+				border-radius: 3px;
+			}
+		}
+		.linkItem {
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.createDate {
+			display: flex;
+			font-size: 12px;
+			opacity: 0.8;
+			margin-left: 10px;
+			justify-content: flex-end;
+			flex-grow: 1;
+		}
+	}
+
+	.postText {
+		font-size: 16px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		word-break: break-word;
+	}
+	.delete {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.editButton {
+		position: absolute;
+		right: 41px;
+		bottom: 0;
+	}
+	.cancelEdit {
+		position: absolute;
+		padding: 0;
+		right: 41px;
+		bottom: 0;
+		font-size: 37px;
+	}
+	.commentIsEdited {
+		display: flex;
+		justify-content: flex-start;
+		font-size: 10px;
+	}
+}

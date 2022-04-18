@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'mixins';
+
+:root {
+	--colorBackground: #f2f2f2;
+	--colorBackgroundHeader: #e2fcfe;
+	--colorBackgroundButtons: #e2fcfe;
+	--colorBlue: rgb(0, 26, 255);
+	--font: 'Inter', sans-serif;
+
+	// --gridMargin: calc(40 / 2560 * 100);
+	// --gridWidth: calc(209 / (2560 - 100 * 2) * 100);
+	// --gridGutter: calc(30 / (2560 - 100 * 2) * 100);
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: var(--font);
+}
+
+body {
+	background-color: var(--colorBackground) !important;
+}
+
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
