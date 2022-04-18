@@ -1,2 +1,2 @@
 # newsApp
-Приложение типа vc.ru на nest js , next js, redux, ts
+Приложение типа vc.ru на nest js , next js, redux, ts, postgresql
